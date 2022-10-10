@@ -7,6 +7,6 @@ class MealView
 
   def ask_input(question)
     puts question
-    input = gets.chomp
+    gets.chomp
   end
 end

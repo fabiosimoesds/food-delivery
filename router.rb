@@ -1,7 +1,8 @@
 require "pry"
 class Router
-  def initialize(meals_controller)
+  def initialize(meals_controller, customers_controller)
     @meals_controller = meals_controller
+    @customers_controller = customers_controller
     @running = true
   end
 
@@ -18,7 +19,8 @@ class Router
     case action
     when 1 then @meals_controller.list_meals
     when 2 then @meals_controller.add
-    when 3 then @customers_controller.add
+    when 3 then @customers_controller.list_customers
+    when 4 then @customers_controller.add_customer
     when 0 then exit
     end
   end
@@ -32,6 +34,7 @@ class Router
     puts "1 - See All Meals"
     puts "2 - Create new Meal"
     puts "3 - See All Customers"
+    puts "4 - Create new Customer"
     puts "0 - Exit"
   end
 end
