@@ -11,7 +11,6 @@ class MealsController
   def list_meals
     # Get all the meals from the repo
     meals = @meals.all
-    binding.pry
     # Send to the view to be listed on the app
     @meal_view.index(meals)
   end
